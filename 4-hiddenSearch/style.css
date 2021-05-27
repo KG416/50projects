@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,16 +6,39 @@
 
 body {
     background: rgb(165, 28, 48);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Cinzel';
     margin: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 100vh;
     overflow: hidden;
 }
 
+.header {
+    color: white;
+    background-color: rgb(38, 38, 38);
+    padding: 20px 40px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 80px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.header h2 {
+    font-size: 25px;
+    margin: 0;
+}
+
 .search {
+    margin-top: 250px;
     position: relative;
     height: 50px;
 }
@@ -53,4 +76,16 @@ body {
 
 .search.active .btn {
     transform: translateX(198px);
+}
+
+@media (max-width: 760px) {
+    .header {
+    padding: 10px 20px;
+    }
+    .header h1 {
+        font-size: 60px;
+    }
+     .header h2 {
+        font-size: 18px;
+    }
 }
