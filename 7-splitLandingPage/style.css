@@ -3,8 +3,9 @@
 :root {
     --left-bg-color: rgba(0, 128, 0, 0.5);
     --right-bg-color: rgba(255, 204, 0, 0.5);
-    --left-btn-hover-color: rgba(0, 128, 0, 1);
-    --right-btn-hover-color: rgb(255, 162, 0);
+    --left-btn-hover-color: linear-gradient(90deg, rgba(164,234,85,1) 0%, rgba(0,128,0,1) 100%);
+    --right-btn-hover-color: linear-gradient(90deg, rgb(255, 216, 87) 0%, rgb(255, 162, 0) 100%);
+
     --hover-width: 75%;
     --other-width: 25%;
     --speed: 1s;
@@ -38,7 +39,8 @@ h1 {
     transform: translateX(-50%);
     text-decoration: none;
     color: white;
-    border: white solid 0.2rem;
+    /* border: white solid 0.2rem; */
+    box-shadow: 0 0 0 0.2rem white; /* emulate a border */
     font-size: 1rem;
     width: 15rem;
     padding: 1.5rem;
@@ -51,14 +53,13 @@ h1 {
 }
 
 .split.left .btn:hover {
-    background-color: var(--left-btn-hover-color);
-    border-color: var(--left-btn-hover-color);
+    background: var(--left-btn-hover-color);
+    box-shadow: none;
 }
 
 .split.right .btn:hover {
-    background-color: var(--right-btn-hover-color);
-    border-color: var(--right-btn-hover-color);
-    /* color: rgb(126, 126, 126); */
+    background: var(--right-btn-hover-color);
+    box-shadow: none;
 }
 
 .container {
